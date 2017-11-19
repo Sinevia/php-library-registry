@@ -1,6 +1,8 @@
 # PHP Library Registry
 
-Global registry
+The Registry provides a safe implementation of an a registry store for variables, that can be used anywhere in the app.
+
+Its a safe alternative of the $GLOBALS variable. 
 
 ## Background ##
 
@@ -25,5 +27,12 @@ Add the following to your composer file:
 
 ```
 #!php
+Registry::set('admin_email','admin@domain.com');
+
+if (Registry::has('admin_email')) { 
+    echo Registry::get('admin_email');
+}
+
+Registry::remove('admin_email');
 
 ```
