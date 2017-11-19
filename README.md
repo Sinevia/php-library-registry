@@ -25,8 +25,7 @@ Add the following to your composer file:
 ## Usage ##
 
 
-```
-#!php
+```php
 Registry::set('admin_email','admin@domain.com');
 
 if (Registry::has('admin_email')) { 
