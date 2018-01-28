@@ -4,7 +4,7 @@
     "type": "library",
     "keywords": ["registry", "library", "php", "sinevia"],    
     "homepage": "http://github.com/sinevia/php-library-registry",
-    "license": "commercial",
+    "license": "proprietary",
     "authors": [
         {
             "name": "Milan Lesichkov",
