@@ -2,7 +2,7 @@
 
 The Registry provides a safe implementation of an a registry store for variables, that can be used anywhere in the app.
 
-Its a safe alternative of the $GLOBALS variable. 
+It is a safe alternative of the $GLOBALS variable. 
 
 ## Background ##
 
@@ -25,13 +25,19 @@ Add the following to your composer file:
 ## Usage ##
 
 
+### 1. Setting, retrieving, removing ###
 ```php
-Registry::set('admin_email','admin@domain.com');
+\Sinevia\Registry::set('admin_email','admin@domain.com');
 
-if (Registry::has('admin_email')) { 
-    echo Registry::get('admin_email');
+if (\Sinevia\Registry::has('admin_email')) { 
+    echo \Sinevia\Registry::get('admin_email');
 }
 
-Registry::remove('admin_email');
+\Sinevia\Registry::remove('admin_email');
 
+```
+
+### 2. Default value ###
+```php
+$title = \Sinevia\Registry::get('title', 'Undefined');
 ```
