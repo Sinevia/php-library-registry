@@ -8,19 +8,15 @@ It is a safe alternative of the $GLOBALS variable.
 
 ## Installation ##
 
-Add the following to your composer file:
+### 1. Via Composer ###
 
-```json
-   "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/sinevia/php-library-registry.git"
-        }
-    ],
-    "require": {
-        "sinevia/php-library-registry": "dev-master"
-    },
 ```
+composer require sinevia/php-library-registry
+```
+
+### 2. Manually ###
+
+Download from https://github.com/Sinevia/php-library-registry 
 
 ## Usage ##
 
