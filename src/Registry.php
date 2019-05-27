@@ -37,30 +37,39 @@ class Registry {
     private static $registry = array();
 
     //private final function __construct(){}
-
-    public static function set($key, $value) {
-        self::$registry[$key] = $value;
+    
+    public static function clear() {
+        self::$registry = array();
     }
-
+    
     public static function get($key, $default = null) {
         if (self::has($key)) {
             return self::$registry[$key];
         }
         return $default;
     }
-
+    
     public static function has($key) {
         return (isset(self::$registry[$key])) ? true : false;
     }
-
+    
+    /**
+     * Checks if a key equals the given value
+     * @return boolean
+     */
+    public static function equals($key, $value) {
+        $currentValue = self::get($key);
+        return ($currentValue === $value) ? true : false;
+    }
+    
     public static function remove($key) {
         if (self::has($key) == true) {
             unset(self::$registry[$key]);
         }
     }
 
-    public static function clear() {
-        self::$registry = array();
+    public static function set($key, $value) {
+        self::$registry[$key] = $value;
     }
 
     public static function fromArray($array) {
@@ -76,7 +85,6 @@ class Registry {
     }
 
 }
-
 //===========================================================================//
 // CLASS: Registry                                                           //
 //============================== END OF CLASS ===============================//
