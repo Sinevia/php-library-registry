@@ -71,6 +71,17 @@ class Registry {
     public static function set($key, $value) {
         self::$registry[$key] = $value;
     }
+    
+    /**
+     * Sets a key only if it does not exist
+     * @return boolean
+     */
+    public static function setIfNotExists($key, $value) {
+        if (self::has($key)) {
+            return;
+        }
+        self::$registry[$key] = $value;
+    }
 
     public static function fromArray($array) {
         self::$registry = $array;
