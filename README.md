@@ -2,7 +2,9 @@
 
 The Registry provides a safe implementation of an a registry store for variables, that can be used anywhere in the app.
 
-It is a safe alternative of the $GLOBALS variable. 
+It is a safe alternative of the $GLOBALS variable.
+
+![No Dependencies](https://img.shields.io/badge/no-dependencies-success.svg)
 
 ## Background ##
 
